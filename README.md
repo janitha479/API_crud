@@ -7,6 +7,35 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+# Student Management API
+
+This repository contains a Laravel-based API controller for managing student details, including viewing, adding, updating, and deleting student records. The `studentController` class interacts with the `student_we` model to perform CRUD operations. Below is a brief overview of each function in the controller:
+
+## Controller Functions
+
+- **viewStd**: Retrieves a list of all students and returns it as JSON.
+- **viewStdById**: Finds a student by their ID and returns the student data. If the ID does not exist, returns an error message.
+- **deleteStd**: Deletes a student by their ID. If the ID does not exist, returns an error message.
+- **storeStd**: Adds a new student record to the database, using data provided in the request (name, NIC, course, and contact).
+- **Updatestd**: Updates an existing student's details by their ID. If any fields are missing in the request, it keeps the existing values. Returns the updated data or an error if the ID is not found.
+
+## Example Usage
+
+The API can be tested using tools like Postman, where endpoints can be accessed via standard HTTP methods:
+- `GET` requests for viewing all students or by ID.
+- `POST` requests for adding new student records.
+- `PUT` requests for updating existing student records.
+- `DELETE` requests for removing student records by ID.
+
+This controller offers a simple interface for managing student data, and it can be easily integrated with a frontend or other backend services for larger applications. 
+
+## Technologies Used
+
+- **Laravel**: PHP framework for building web applications.
+- **Eloquent ORM**: Used for database interactions with the `student_we` model.
+
+Feel free to clone this repository and modify the controller as needed to fit your application’s requirements.
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
