@@ -56,7 +56,7 @@ class studentController extends Controller
         $data->contact =$request->contact ?? $data->contact;
         $data->save();
 
-         return response()->json(['Status'=>'Student Details Update successfully','Updated details'=> $data],200);
+         return response()->json(['Status'=>'Student Details Updateed successfully','Updated details'=> $data],200);
         }
 
     }
