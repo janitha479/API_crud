@@ -9,6 +9,8 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::get('/show-std',[studentController::class,'viewStd']);
+Route::post('/store-std',[studentController::class,'storeStd']);
+
 Route::get('/show-std-byID/{id}',[studentController::class,'viewStdById']);
 Route::delete('/delete-std/{id}',[studentController::class,'deleteStd']);
 Route::put('/update-std/{id}',[studentController::class,'Updatestd']);
